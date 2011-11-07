@@ -1,0 +1,252 @@
+@import "slide.css";
+@import "redmond/jquery-ui-1.8.16.custom.css";
+
+@font-face{
+    font-family: Museo;
+    src: url(MuseoSans_500.otf) format("truetype");
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Museo;
+    background: url(bg_body.png) repeat-x 0 0;
+}
+
+div#clouds {
+    position: absolute;
+    top: 380px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background: transparent url(bg_slide_clouds.png) repeat-x 100% 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+div#wrap {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 960px;
+    background: url(bg_wrap.png) no-repeat;
+}
+
+div#header {
+    position: relative;
+    margin: 0 0 30px 0;
+    padding: 0;
+    width: 960px;
+    height: 376px;
+    z-index: 3;
+}
+
+div#full {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    top: 50px;
+    text-align: left;
+    width: 1024px;
+    height: 450px;
+    font-family: Museo;
+}
+
+div.our-frames {
+    position: relative;
+    margin: 0 0 30px 0;
+    padding: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+div.text-frame{
+    float: left;
+    margin: 0 30px 0 0;
+    padding: 0;
+    height: 250px;
+    width: 30%;
+}
+
+div.contact{
+    width: 31%;
+}
+
+.clear {
+    clear: both;
+}
+
+div#footerwrap {
+    margin: 0;
+    padding: 0px 0;
+    width: 100%;
+    background: url(bg_footer.png) repeat-x;
+}
+
+div#footer{
+    margin: 0 auto;
+    padding-top: 110px;
+    width: 960px;
+    display: block;
+    height: 45px;
+    border: none;
+}
+
+div#wrap div#langs {
+    position: absolute;
+    top: 30px;
+    left: 495px;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+div#wrap ul#nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 99;
+}
+
+div#wrap ul#nav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+div#wrap ul#nav li a {
+    float: left;
+    margin: 0 0 0 6px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 99;
+    border-bottom: none;
+}
+
+div#wrap ul#nav li a span { 
+    display: none;
+}
+
+div#wrap ul#nav li.home a {
+    width: 69px;
+    height: 111px;
+    background: url(bg_nav_home.png) no-repeat 0 0;
+}
+
+div#wrap ul#nav li.home a:hover {
+    width: 69px;
+    height: 111px;
+    background: url(bg_nav_home.png) no-repeat 0 -111px;
+}
+
+div#wrap ul#nav li.home a.active {
+    width: 69px;
+    height: 111px;
+    background: url(bg_nav_home.png) no-repeat 0 -222px;
+}
+
+div#wrap ul#nav li.about a {
+    width: 77px;
+    height: 111px;
+    background: transparent url(bg_nav_about.png) no-repeat 0 0;
+}
+
+div#wrap ul#nav li.about a:hover {
+    width: 77px;
+    height: 111px;
+    background: url(bg_nav_about.png) no-repeat 0 -111px;
+}
+
+div#wrap ul#nav li.about a.active {
+    width: 77px;
+    height: 111px;
+    background: transparent url(bg_nav_about.png) no-repeat 0 -222px;
+}
+
+div#wrap ul#nav li.work a {
+    width: 71px;
+    height: 111px;
+    background: transparent url(bg_nav_work.png) no-repeat 0 0;
+}
+
+div#wrap ul#nav li.work a:hover {
+    width: 71px;
+    height: 111px;
+    background: url(bg_nav_work.png) no-repeat 0 -111px;
+}
+
+div#wrap ul#nav li.work a.active {
+    width: 71px;
+    height: 111px;
+    background: transparent url(bg_nav_work.png) no-repeat 0 -222px;
+}
+
+div#wrap div#carousel{
+    left: 57%;
+    top: 37%;
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    float: left;
+}
+
+div#dialog, .contact-label, .contact-text, .foot-text, .copyright{
+    font-family: Museo;
+}
+
+.contact-text{
+    width: 192px;
+}
+
+.contact-label{
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.initial-state{
+    color: gray;
+}
+
+div.foot-text{
+    width: 190px;
+    float: left;
+}
+
+div.foot-text span, div.copyright, div.copyright span{
+    color: rgb(132,96,61);
+    cursor: pointer;
+}
+
+div.copyright{
+    cursor: default;
+}
+
+div.copyright{
+    top: 10px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.validation-error{
+    color: red;
+    font-size: 10px;
+}
+
+.pants-class{
+    position: relative;
+    top: 120px;
+    left: 100px;
+}
+
+#img-work{
+    text-align: center;
+}

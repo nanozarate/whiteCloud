@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>White Cloud Solutions</title>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <%= stylesheet_link_tag "style" %>
+
+    <%= javascript_include_tag "jquery-1.6.4.js" %>
+    <%= javascript_include_tag "jquery-ui-1.8.16.custom.min.js" %>
+    <%= javascript_include_tag "slides.jquery.js" %>
+    <%= javascript_include_tag "main.js" %>
+  </head>
+  <body>
+    <div id="clouds"></div>
+    <div id="slide-wrap">
+      <div id="wrap">
+        <div id="header">
+          <ul id="nav">
+            <li class="home"><a id="home-link" class="link active" href="http://localhost:3000"><span>Home</span></a></li>
+            <li class="work"><a class="work link"><span>Our Work</span></a></li>
+            <li class="about"><a class="about link"><span>About Us</span></a></li>
+          </ul>
+          <div id="container">
+            <div id="example">
+              <div id="slides">
+                <div class="slides_container">
+                  <div class="slide">
+                    <a title="Android" target="_blank"><%= image_tag("slide-android.jpg", :alt => "Slide Android") %></a>
+                    <div class="caption" style="bottom:0">
+                      <p><%= t("label-android") %></p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <a title="Web Design" target="_blank"><%= image_tag("slide-webdesign.jpg", :alt => "Slide Web Design") %></a>
+                    <div class="caption">
+                      <p><%= t("label-webDesign") %></p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <a title="Web Applications" target="_blank"><%= image_tag("slide-webapplications.jpg", :alt => "Slide Web Application") %></a>
+                    <div class="caption">
+                      <p><%= t("label-webApps") %></p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <a title="Consulting" target="_blank"><%= image_tag("slide-consulting.jpg", :alt => "Slide Consulting") %></a>
+                    <div class="caption">
+                      <p><%= t("label-consulting") %></p>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="prev"><%= image_tag("arrow-prev.png", :size => "24x43", :alt => "Arrow Prev") %></a>
+                <a href="#" class="next"><%= image_tag("arrow-next.png", :size => "24x43", :alt => "Arrow Next") %></a>
+              </div>
+              <%= image_tag("example-frame.png", :id => "frame", :size => "739x341", :alt => "Example Frame") %>
+            </div>
+          </div>
+        </div>
+        <div id="full" class="clear">
+          <div class="our-frames clear">
+            <div class="text-frame">
+              <h3><%= t("title-whoWeAre") %></h3>
+              <p><%= t("text-whoWeAre") %></p>
+            </div>
+            <div class="text-frame">
+              <h3><%= t("title-whatWeDo") %></h3>
+              <p><%= t("text-whatWeDo") %></p>
+              <div align="center"><%= image_tag("bg_works.png", :id => "img-work", :size => "265x194", :alt => "What We Do") %></div>
+            </div>
+            <div class="text-frame contact">
+              <h3><%= t("title-contactUs") %></h3>
+              <h4><%= t("label-contactDescription") %></h4>
+              <div>
+                <%= form_for @contact, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
+                  <table>
+                    <tr>
+                      <td class="contact-label"><%= f.label t("label-name") %></td>
+                      <td>
+                        <%= f.text_field(:name, :id => "text-name", :value => "Mr. White Cloud", :class => "initial-state contact-text") %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="contact-label"><%= f.label t("label-email") %></td>
+                      <td>
+                        <%= f.text_field(:email, :id => "text-email", :value => "example@whitecloud.com", :class => "initial-state contact-text") %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="contact-label"><%= f.label t("label-phone") %></td>
+                      <td><%= f.text_field(:phone, :id => "text-phone", :value => "555-1111", :class => "initial-state contact-text") %></td>
+                    </tr>
+                    <tr>
+                      <td class="contact-label"><%= f.label t("label-subject") %></td>
+                      <td><%= f.text_field(:subject, :id => "text-subject", :value => "Web Design", :class => "initial-state contact-text") %></td>
+                    </tr>
+                    <tr>
+                      <td class="contact-label"><%= f.label t("label-message") %></td>
+                      <td>
+                        <%= f.text_area(:message, :id => "message-area", :value => t("label-type-message"), :rows => 8, :cols => 25, :class => "initial-state contact-text") %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="right">
+                        <button id="send-button" style="font-size: 12px;"><%= t("button-send") %></button>
+                      </td>
+                    </tr>
+                  </table>
+                <% end %>
+              </div>
+            </div>
+            <%= image_tag("bg_pants_ruby.png", :alt => "Pants Ruby", :class => "pants-class") %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footerwrap">
+      <div id="footer">
+        <div class="foot-text"><span class="services"><%= t("footer-label-services") %></span></div>
+        <div class="foot-text"><span class="tech"><%= t("footer-label-technologies") %></span></div>
+        <div class="foot-text"><span class="work"><%= t("footer-label-ourWork") %></span></div>
+        <div class="foot-text"><span class="about"><%= t("footer-label-aboutUs") %></span></div>
+        <div class="foot-text"><span class="terms"><%= t("footer-label-privacyTerms") %></span></div>
+        <div class="copyright">
+          <%= t("footer-label-rights") %>
+          <a href="http://www.ruby-lang.org/" target="_blank"><%= image_tag("ruby.png", :width => "20", :alt => "", :title => "Ruby") %></a>
+        </div>
+      </div>
+    </div>
+    <div id="dialog" title="White Cloud" style="display:none">
+      <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+    <input id="text-services" type="hidden" value="<%= t("text-services") %>" />
+    <input id="text-tech" type="hidden" value="<%= t("text-tech") %>" />
+    <input id="text-work" type="hidden" value="<%= t("text-work") %>" />
+    <input id="text-about" type="hidden" value="<%= t("text-about") %>" />
+    <input id="text-terms" type="hidden" value="<%= t("text-terms") %>" />
+  </body>
+</html>

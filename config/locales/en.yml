@@ -1,0 +1,41 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+
+  title-whoWeAre: "WHO WE ARE"
+  title-whatWeDo: "WHAT WE DO"
+  title-contactUs: "CONTACT US"
+
+  text-whoWeAre: "Just a bunch of guys working on web and mobile development."
+  text-whatWeDo: "Nothing but Tota bla bla bla bla bla bla y bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla..."
+  text-services: "This is the text for services..."
+  text-tech: "This is the text for technologies..."
+  text-work: "This is the text for our work..."
+  text-about: "This is the text for about us..."
+  text-terms: "This is the text for privacy & terms..."
+
+  label-home: "Home"
+  label-ourWork: "Our Work"
+  label_aboutUs: "About Us"
+  label-android: "Android: Apps & Games"
+  label-webDesign: "Web Design"
+  label-webApps: "Web Applications"
+  label-consulting: "Consulting"
+  label-contactDescription: "Tell us here what can we do for you..."
+  label-name: "Your Name"
+  label-email: "Your Email"
+  label-phone: "Your Phone"
+  label-subject: "Subject"
+  label-message: "Message"
+  label-type-message: "Type your message here..."
+  
+  button-send: "Send"
+
+  footer-label-services: "Services"
+  footer-label-technologies: "Technologies"
+  footer-label-ourWork: "Our Work"
+  footer-label-aboutUs: "About Us"
+  footer-label-privacyTerms: "Privacy & Terms"
+  footer-label-rights: "© 2011 WhiteCloud® - All Rights Reserved - Powered by"
